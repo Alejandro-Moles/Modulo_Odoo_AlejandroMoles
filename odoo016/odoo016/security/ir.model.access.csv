@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_odoo016_usuario_usuario,odoo016.usuario.usuario,model_odoo016_usuario,odoo016.group_odoo016_usuario,1,0,0,0
+access_odoo016_usuario_administrador,odoo016.usuario.administrador,model_odoo016_usuario,odoo016.group_odoo016_administrador,1,1,1,1_

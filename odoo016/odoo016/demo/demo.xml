@@ -1,0 +1,52 @@
+<odoo>
+    <data>
+<!--
+          <record id="object0" model="odoo016.odoo016">
+            <field name="name">Object 0</field>
+            <field name="value">0</field>
+          </record>
+
+          <record id="object1" model="odoo016.odoo016">
+            <field name="name">Object 1</field>
+            <field name="value">10</field>
+          </record>
+
+          <record id="object2" model="odoo016.odoo016">
+            <field name="name">Object 2</field>
+            <field name="value">20</field>
+          </record>
+
+          <record id="object3" model="odoo016.odoo016">
+            <field name="name">Object 3</field>
+            <field name="value">30</field>
+          </record>
+
+          <record id="object4" model="odoo016.odoo016">
+            <field name="name">Object 4</field>
+            <field name="value">40</field>
+          </record>
+-->
+<record id="object0" model="odoo016.usuario">
+            <field name="name">Antonio_1</field>
+            <field name="nombre">Antonio</field>
+            <field name="edad">20</field>
+            <field name="telefono">666574636</field>
+          </record>
+
+        <record id="object1" model="odoo016.usuario">
+            <field name="name">Pedro_Pedro</field>
+            <field name="nombre">Pedro</field>
+            <field name="edad">19</field>
+            <field name="telefono">32445636</field>
+          </record>
+
+        <record id="object2" model="odoo016.usuario">
+            <field name="name">Felipe_2</field>
+            <field name="nombre">Felipe</field>
+            <field name="edad">30</field>
+            <field name="telefono">66657456</field>
+          </record>
+
+
+    </data>
+</odoo>

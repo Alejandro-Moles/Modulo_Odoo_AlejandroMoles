@@ -1,0 +1,136 @@
+<odoo>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="odoo016.list">
+      <field name="name">odoo016 list</field>
+      <field name="model">odoo016.odoo016</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="odoo016.action_window">
+      <field name="name">odoo016 window</field>
+      <field name="res_model">odoo016.odoo016</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="odoo016.action_server">
+      <field name="name">odoo016 server</field>
+      <field name="model_id" ref="model_odoo016_odoo016"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="odoo016" id="odoo016.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="odoo016.menu_1" parent="odoo016.menu_root"/>
+    <menuitem name="Menu 2" id="odoo016.menu_2" parent="odoo016.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="odoo016.menu_1_list" parent="odoo016.menu_1"
+              action="odoo016.action_window"/>
+    <menuitem name="Server to list" id="odoo016" parent="odoo016.menu_2"
+              action="odoo016.action_server"/>
+-->
+     <!-- Vistas de usuario-->
+  <data>
+    <record model="ir.ui.view" id="odoo016.usuario_list_view">
+      <field name="name">odoo016.usuario.view.tree</field>
+      <field name="model">odoo016.usuario</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="nombre"/>
+          <field name="telefono"/>
+          <field name="edad"/>
+        </tree>
+      </field>
+    </record>
+
+
+<!-- search -->
+
+    <record model="ir.ui.view" id="odoo016.usuario_search_view">
+      <field name="name">odoo016.usuario.view.search</field>
+      <field name="model">odoo016.usuario</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="nombre"/>
+          <field name="telefono"/>
+          <group>
+            <filter name="group_by_nombre" string="nombre" context="{'gropup_by':'nombre'}" />
+          </group>
+        </search>
+      </field>
+    </record>
+
+
+
+
+   <!-- form -->
+
+    <record model="ir.ui.view" id="odoo016.usuario_form_view">
+      <field name="name">odoo016.usuario.view.form</field>
+      <field name="model">odoo016.usuario</field>
+      <field name="arch" type="xml">
+        <form string="Información usuario">
+          <sheet>
+            <div class="oe_title">
+              <h1>
+                NombreUser <field name="name" placeholder="nombreUsu"/>
+              </h1>
+            </div>
+            <group>
+              <group>
+                <separator string="Datos"/>
+                <field name="nombre" placeholder="nombre"/>
+                <field name="telefono"/>
+                <field name="edad"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+
+
+    <record model="ir.actions.act_window" id="odoo016.usuario_action_window">
+      <field name="name">Usuarios</field>
+      <field name="res_model">odoo016.usuario</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="odoo016" id="odoo016.menu_root" web_icon="ejercicio,static/description/icon2.png"/>
+
+    <menuitem name="usuarios" id="odoo016.menu_usuario" parent="odoo016.menu_root"/>
+    <menuitem name="List" id="odoo016.menu_usuario_list" parent="odoo016.menu_usuario"
+              action="odoo016.usuario_action_window"/>
+
+
+  </data>
+</odoo>
